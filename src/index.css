@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bat-bg: #03060b;
+    --bat-surface: #080e18;
+    --bat-border: #1e293b;
+    --bat-gold: #f59e0b;
+    --bat-gold-bright: #fbbf24;
+    --bat-yellow: #eab308;
+    --bat-amber: #d97706;
+  }
+
+  body {
+    background-color: var(--bat-bg);
+    color: #e2e8f0;
+    font-family: 'Chakra Petch', system-ui, -apple-system, sans-serif;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #050a12;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #273549;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #eab308;
+  }
+}
+
+.font-hud {
+  font-family: 'Orbitron', 'Chakra Petch', monospace;
+}
+
+.font-mono-code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Tactical HUD scanning line */
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(1000%); }
+}
+
+.animate-scanline {
+  animation: scanline 8s linear infinite;
+}
+
+/* Radar pulse animation */
+@keyframes radar-pulse {
+  0% { transform: scale(0.85); opacity: 0.8; }
+  50% { transform: scale(1.05); opacity: 0.3; }
+  100% { transform: scale(0.85); opacity: 0.8; }
+}
+
+.animate-radar-pulse {
+  animation: radar-pulse 3s ease-in-out infinite;
+}
+
+/* Slow rotation */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 24s linear infinite;
+}
+
+/* Reverse spin */
+@keyframes spin-reverse-slow {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+.animate-spin-reverse-slow {
+  animation: spin-reverse-slow 18s linear infinite;
+}
+
+/* Rapid spin for thinking */
+@keyframes spin-fast {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-fast {
+  animation: spin-fast 3s linear infinite;
+}
+
+/* Glowing gold box shadow */
+.bat-glow {
+  box-shadow: 0 0 20px -3px rgba(234, 179, 8, 0.35);
+}
+
+.bat-glow-lg {
+  box-shadow: 0 0 35px -2px rgba(234, 179, 8, 0.5);
+}
+
+.bat-text-glow {
+  text-shadow: 0 0 10px rgba(250, 204, 21, 0.6);
+}
+
+.bat-grid-bg {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(30, 41, 59, 0.25) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(30, 41, 59, 0.25) 1px, transparent 1px);
+}

@@ -1,0 +1,6 @@
+{
+  "name": "B.A.T. AI Assistant",
+  "description": "Batman Assistent Transformer — Futuristic personal AI assistant with resilient Gemini 503 error handling, fallback models, HUD visualizer, voice control, and computer automation tools.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
